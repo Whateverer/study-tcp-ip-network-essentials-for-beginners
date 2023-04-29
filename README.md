@@ -25,3 +25,23 @@ Network = 상호작용
 
 ### 개념과 구현(혹은 실체)
 연예인 (추상적 - 개념(요소)) - 박은빈 (구체적 - 구현)
+
+## User mode와 Kernel mode
+- Application : L7
+- Presentation : L6
+- Session : L5
+- Transport : L4
+- Network : L3
+- Data Link : L2
+- Physical : L1 (NIC)
+
+## OSI 7 layer와 식별자
+- Application : L7 - HTTP  
+- Presentation : L6 - X 
+- Session : L5 - SSL (TLS)
+- Transport : L4 - TCP, UDP / 식별자 : Port 번호 (Process(L7) / Interface(L1) / Service(L4))
+- Network : L3 - Internet / 식별자 : IP 주소 (host에 대한 식별자) 
+- Data Link : L2 - Ethernet / 식별자 : MAC주소 (물리적 주소)
+- Physical : L1 - X 
+
+식별자 
