@@ -51,3 +51,16 @@ Network = 상호작용
 Computer가 Network에 연결이 되어있으면 Host가 된다. (Host == Network에 연결된 Computer)
 - **Switch** : Network 그 자체를 이루는 host (Network의 기능, Infrastructure) - ex) Router(L3 switch의 일종), IPS(보안 switch), Tab, Aggregation
 - **End-point** : Network 인프라를 이용하는 이용주체 (단말기) - 대표적인 것 : Client, Server (단말기의 역할에 따라 구분), Peer(Client와 Server를 동시에)
+
+## 스위치가 하는 일과 비용
+### Switch가 하는 일
+출발지 ~ 목적지 까지 가는 길에 경로 선택    
+교차로가 Switch, 경로가 Interface, 경로선택은 Switching     
+IP주소를 근거로 Switching 하면 L3 Switching (Router), 이정표는 Routing Table
+
+만약에 MAC주소를 가지고 Switching 하면 L2 Switching,   
+Port 번호로 Switching -> L4 Switch,    
+HTTP 프로토콜로 Switching -> L7 Switch이다.
+
+### 항상 고민해야 할 주제는 '비용'
+Matric : 이동하는 데 드는 비용
