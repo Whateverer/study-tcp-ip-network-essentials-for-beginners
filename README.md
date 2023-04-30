@@ -79,3 +79,14 @@ Network의 규모 : WAN > MAN > LAN
 
 Packet : L2에서 언급하는 인터넷에서의 단위
 L2 수준에서의 단위 : Frame (데이터 유통단위)
+
+## L2 스위치에 대해서
+### L2 Access switch
+- End-point와 직접 연결되는 스위치
+- MAC주소를 근거로 스위칭
+- Link up : L2 Access에 연결이 잘 되었다.
+- Link down : L2 Access에 연결이 해제되었다. (케이블에 문제가 생겼거나 연결이 해제됨)
+
+### L2 Distribution switch
+- 쉽게 생각하면 L2 Access 스위치를 위한 스위치
+- VLAN(Virtual LAN) 기능을 제공하는 것이 일반적
