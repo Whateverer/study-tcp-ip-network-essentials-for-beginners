@@ -44,4 +44,10 @@ Network = 상호작용
 - Data Link : L2 - Ethernet / 식별자 : MAC주소 (물리적 주소)
 - Physical : L1 - X 
 
-식별자 
+식별자를 잘 알아두기!!
+
+
+## Host는 이렇게 외우자
+Computer가 Network에 연결이 되어있으면 Host가 된다. (Host == Network에 연결된 Computer)
+- **Switch** : Network 그 자체를 이루는 host (Network의 기능, Infrastructure) - ex) Router(L3 switch의 일종), IPS(보안 switch), Tab, Aggregation
+- **End-point** : Network 인프라를 이용하는 이용주체 (단말기) - 대표적인 것 : Client, Server (단말기의 역할에 따라 구분), Peer(Client와 Server를 동시에)
