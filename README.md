@@ -35,6 +35,8 @@ Network = 상호작용
 - Data Link : L2
 - Physical : L1 (NIC)
 
+# Internet 기반 네트워크 입문
+
 ## OSI 7 layer와 식별자
 - Application : L7 - HTTP  
 - Presentation : L6 - X 
@@ -64,3 +66,16 @@ HTTP 프로토콜로 Switching -> L7 Switch이다.
 
 ### 항상 고민해야 할 주제는 '비용'
 Matric : 이동하는 데 드는 비용
+
+# L2 수준에서 외울 것들
+
+## NIC, L2 Frame, LAN카드 그리고 MAC 주소
+### NIC + L2 Frame + LAN card + MAC
+- NIC(Network Interface Card)는 흔히 LAN(Local Area Network) 카드이다.
+- 유/무선 NIC이 있지만 굳이 구별하지 않고 NIC이라고 할 때가 많다.
+- NIC은 H/W이며 MAC 주소를 갖는다.
+
+Network의 규모 : WAN > MAN > LAN
+
+Packet : L2에서 언급하는 인터넷에서의 단위
+L2 수준에서의 단위 : Frame (데이터 유통단위)
