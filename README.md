@@ -134,3 +134,17 @@ Physical(물리적, H/W)로 설명되는 부분이 LAN이라고 생각하면 된
 - 그 안은 TCP Segment (L4), L3 Packet의 Payload
 - Encapsulation은 합치는 것
 - Decapsulation은 분해하는 것
+
+## 패킷의 생성, 전달
+### 패킷의 생성, 전달, 소멸
+Process가 어떤 데이터를 다른 Process에게 전달해야할 때
+전달할 데이터를 Packet으로 만든다.
+우리집(Host) 현관(Interface)에서 택배기사님(Gateway)에게 전달
+처리 후 받을 Process의 Host에게 전달
+
+### Process가 어떤 데이터를 인터넷을 통해 다른 Process에게 전달하는 과정
+1. Data가 있다고 가정, Process와 Kernel을 이어주는 Tcp Socket(File의 일종, Kernel mode 프로토콜을 User mode Application Process가 접근할 수 있도록 추상화 시켜준 Interface)에 write(send)
+2. Tcp 소켓에서 Data에 Tcp Header를 붙여서 Segment화 한다.
+3. 한 층 더 내려가 IP Header가 또 붙는다.
+4. 한 층 더 내려가면 Ethernet Frame Header가 붙는다.
+5. Driver를 통해 L2 Access를 통해서 나가고 Router를 지나 인터넷으로 나간다.
