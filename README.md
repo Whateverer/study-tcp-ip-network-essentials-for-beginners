@@ -112,3 +112,12 @@ Physical(물리적, H/W)로 설명되는 부분이 LAN이라고 생각하면 된
 - Network ID는 8bit씩 끊어서 세부분으로 나뉜다. 
 ![img.png](img.png)
 
+## L3 IP Packet으로 외워라
+### L3 Packet (단위 데이터)
+- Packet이라는 말은 L3 IP Packet으로 외워라
+- Header와 Payload로 나뉘며 이는 상대적인 분류이다.
+- **최대 크기는 MTU** (중요!!) 보통 MTU는 1500byte정도임.
+![img_1.png](img_1.png)
+- Header가 실어나르는 대상이 Payload
+- Header 정보에서 가장 중요한 정보 (Src(출발지) -> Dst(도착지))
+- Network를 감청하는 프로그램 : Wireshark (Analyzer, Sniffer)
