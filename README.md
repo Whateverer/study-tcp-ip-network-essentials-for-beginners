@@ -101,3 +101,14 @@ MAC - 48bit / FF == 11111111, (FF-FF-FF-FF-FF-FF) => 이 경우가 Broadcast
 Broadcast는 최소화시키는 것이 효율적이다. (Broadcast 중에는 다른 통신을 할 수 없기 때문)
 Physical(물리적, H/W)로 설명되는 부분이 LAN이라고 생각하면 된다.
 
+# L3 수준에서 외울 것들
+
+## IPv4 주소의 기본 구조
+### IPv4 주소의 구조
+- MAC주소는 L2계층에서 가장 중요한 식별자, 48bit 주소체계를 가진다.
+- IP는 32bit 주소체계를 가진다. = 8bit * 4
+- 2의 8승 == 256, 0000 0000 ~ 1111 1111(2) 까지 0~255
+- IP주소는 Network ID와 Host ID로 구성된다.
+- Network ID는 8bit씩 끊어서 세부분으로 나뉜다. 
+![img.png](img.png)
+
