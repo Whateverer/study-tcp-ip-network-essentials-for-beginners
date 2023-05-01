@@ -121,3 +121,16 @@ Physical(물리적, H/W)로 설명되는 부분이 LAN이라고 생각하면 된
 - Header가 실어나르는 대상이 Payload
 - Header 정보에서 가장 중요한 정보 (Src(출발지) -> Dst(도착지))
 - Network를 감청하는 프로그램 : Wireshark (Analyzer, Sniffer)
+
+## Encapsulation과 Decapsulation
+### Encapsulation
+- 별것 아니다. 러시아 전통 목각인형인 마트료시카 인형을 떠올려라.
+- 단위화하고 포장을 하는 것.
+
+### En/Decapsulation
+![img_2.png](img_2.png)
+- 이 전체는 Frame (L2)
+- 그 안은 IP Packet (L3), L2 Frame의 Payload
+- 그 안은 TCP Segment (L4), L3 Packet의 Payload
+- Encapsulation은 합치는 것
+- Decapsulation은 분해하는 것
