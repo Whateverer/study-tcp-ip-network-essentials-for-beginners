@@ -90,3 +90,14 @@ L2 수준에서의 단위 : Frame (데이터 유통단위)
 ### L2 Distribution switch
 - 쉽게 생각하면 L2 Access 스위치를 위한 스위치
 - VLAN(Virtual LAN) 기능을 제공하는 것이 일반적
+
+## LAN과 WAN의 경계 그리고 Broadcast
+- Broadcast 범위를 생각해보자.
+- Broadcast 주소라는 매우 특별한 주소가 존재한다. (MAC, IP 모두 존재)
+- 논리적인 것인지 아니면 물리적인 것인지로 구분하는 것도 방법이다.
+- 일단 MAN(Metropolitan Area Network)은 제외하자.
+
+MAC - 48bit / FF == 11111111, (FF-FF-FF-FF-FF-FF) => 이 경우가 Broadcast
+Broadcast는 최소화시키는 것이 효율적이다. (Broadcast 중에는 다른 통신을 할 수 없기 때문)
+Physical(물리적, H/W)로 설명되는 부분이 LAN이라고 생각하면 된다.
+
