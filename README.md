@@ -148,3 +148,12 @@ Process가 어떤 데이터를 다른 Process에게 전달해야할 때
 3. 한 층 더 내려가 IP Header가 또 붙는다.
 4. 한 층 더 내려가면 Ethernet Frame Header가 붙는다.
 5. Driver를 통해 L2 Access를 통해서 나가고 Router를 지나 인터넷으로 나간다.
+
+## 계층별 데이터 단위
+- Socket(L5 ~ L7) 수준 : Stream
+- L4 : Segment [MSS (Maximun Segment Size)] - 최대 1460 byte
+- L3 : Packet [MTU (Maximun Transmission Unit)] - 최대 1500 byte
+- L1 ~ L2 : Frame
+
+Stream의 특징 : 시작은 있으나 끝을 정의할 수 없다. Application 수준에서 끝을 정한다.
+Stream이 Packet이나 Segment의 최대 크기보다 클 때 분할한다.
