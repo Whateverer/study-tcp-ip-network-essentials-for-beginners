@@ -182,6 +182,8 @@ Stream이 Packet이나 Segment의 최대 크기보다 클 때 분할한다.
 5. TCP의 Buffer에 저장될 때 송신하는 Process 쪽에 ACK를 보낸다. (1,2를 보냈을 때 ACK 3 + 여유공간의 크기를 보낸다.)  
 Socket I/O Buffer의 여유공간 : Window Size라고 한다.
 
+-> TCP 통신은 순서가 중요한 개념!! 
+
 ### Network 장애
 1. Loss (Lost Segment) - Segment를 유실 : 100% Network 문제
 2. Re-transmission (송신 측에서 데이터를 보낸 후 ACK를 기다리는데, 일정 시간 후 ACK가 오지 않으면 다시 데이터를 보낸다.) + ACK-Duplicate (ACK를 중복) : Network 일 수도 있고 End-point 간의 문제일 수 있다.
