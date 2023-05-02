@@ -197,3 +197,12 @@ IP Header는 20 byte가량 되고 Payload는 1480 byte정도 된다.
 TTL(Time to Live) 값이 0이 되면 패킷은 버려진다.    
 Protocol : 또 다른 Header가 올 때 그것에 대한 설명   
 Header checksum : 네트워크에서 패킷이 송수신되는 중 데이터가 온전한지 검사한 검사합 값 
+
+## 서브넷 마스크와 CIDR
+### Subnet Mask
+255(A class).255(B class).255(C class).0
+bit단위로 AND연산을 했을 때 Network ID가 나와 일치한다면 우리 Network로 오는 Packet인 것을 검증한다.
+
+### CIDR (Classless Inter-Domain Routing)
+ex) 192.168.0.10/24
+
