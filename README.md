@@ -157,3 +157,33 @@ Process가 어떤 데이터를 다른 Process에게 전달해야할 때
 
 Stream의 특징 : 시작은 있으나 끝을 정의할 수 없다. Application 수준에서 끝을 정한다.
 Stream이 Packet이나 Segment의 최대 크기보다 클 때 분할한다.
+
+## 이해하면 인생이 바뀌는 TCP/IP 송수신 구조
+### 파리에서 에펠탑을 택배로 보내려면 어떻게 해야할까?
+1. 에펠탑을 분해 -> 크기 줄이기 - Packet (MTU 이하로) : 송신측
+2. 운송
+3. 조립 : 수신측
+
+### TCP 연결이 되었다는 가정 하에 데이터를 송수신한다.
+#### 송신하는 과정 (Encapsulation)
+1. Process에서의 파일을 보낼 때 파일을 copy해서 Buffer에 올린다.
+2. Socket에 I/O할 때 Buffer(메모리공간)가 존재, Socket의 Buffer에도 또 copy해서 올린다. (Process에서 Socket에 파일을 Send한다.)
+3. User mode에서 Kernel로 넘어갈때 TCP로 갈 때 분해(Segmentation)가 일어난다. -> 이 때의 데이터 단위를 Stream이라고 한다.
+4. TCP에서 분해된 개념이 Segment가 된다.
+5. Segment화 된 데이터가 한 층을 더 내려간다(IP 층)
+6. Segment를 박스(Packet) 속에 넣는다.
+7. L2로 내려간다. 트럭(Frame)에 실려 전송된다.
+
+#### 수신하는 과정 (Decapsulation)
+1. L2수준에서 트럭(Frame)에 담긴 택배(Packet)가 올라간다.
+2. L3에서 택배(Packet) 안에서 담긴 Segment를 꺼낸다.
+3. L4수준에서 TCP에서 Socket의 I/O Buffer에 쌓는다.
+4. Process의 Buffer에 Socket의 Buffer에 담겨있던 데이터를 담는다.
+5. TCP의 Buffer에 저장될 때 송신하는 Process 쪽에 ACK를 보낸다. (1,2를 보냈을 때 ACK 3 + 여유공간의 크기를 보낸다.)  
+Socket I/O Buffer의 여유공간 : Window Size라고 한다.
+
+### Network 장애
+1. Loss (Lost Segment) - Segment를 유실 : 100% Network 문제
+2. Re-transmission (송신 측에서 데이터를 보낸 후 ACK를 기다리는데, 일정 시간 후 ACK가 오지 않으면 다시 데이터를 보낸다.) + ACK-Duplicate (ACK를 중복) : Network 일 수도 있고 End-point 간의 문제일 수 있다.
+3. Out of order (순서대로 와야하는데 1,2가 온 후 3이 오지 않고 4가 오는 경우) : 거의 Network 문제
+4. Zero window : End-point 단계에서 Application이 데이터를 빨리 안끌어간 것. (문제가 프로그램에 있음)
