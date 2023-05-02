@@ -215,3 +215,7 @@ Host ID로 쓸 수 없는 주소
 - 0 : 서브넷 마스크로 쓰임
 - 255 : Broadcast로 쓰임
 - 1 : Gateway에 준다.
+
+## Host 자신을 가리키는 IP주소
+내 Process간에 접근, 접속해야할 때 => 127.0.0.1 : Loopback Address
+IPC(Inter Process Communication)을 구현할 때 Socket을 이용해서 내가 나에게 접속하는 과정을 사용
