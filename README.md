@@ -189,3 +189,11 @@ Socket I/O Buffer의 여유공간 : Window Size라고 한다.
 2. Re-transmission (송신 측에서 데이터를 보낸 후 ACK를 기다리는데, 일정 시간 후 ACK가 오지 않으면 다시 데이터를 보낸다.) + ACK-Duplicate (ACK를 중복) : Network 일 수도 있고 End-point 간의 문제일 수 있다.
 3. Out of order (순서대로 와야하는데 1,2가 온 후 3이 오지 않고 4가 오는 경우) : 거의 Network 문제
 4. Zero window : End-point 단계에서 Application이 데이터를 빨리 안끌어간 것. (문제가 프로그램에 있음)
+
+## IP 헤더 형식
+### IPv4 Header 형식
+IP Header는 20 byte가량 되고 Payload는 1480 byte정도 된다.
+![img_3.png](img_3.png)
+TTL(Time to Live) 값이 0이 되면 패킷은 버려진다.    
+Protocol : 또 다른 Header가 올 때 그것에 대한 설명   
+Header checksum : 네트워크에서 패킷이 송수신되는 중 데이터가 온전한지 검사한 검사합 값 
