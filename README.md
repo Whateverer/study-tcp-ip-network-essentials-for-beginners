@@ -206,3 +206,12 @@ bit단위로 AND연산을 했을 때 Network ID가 나와 일치한다면 우리
 ### CIDR (Classless Inter-Domain Routing)
 ex) 192.168.0.10/24
 
+## Broadcast IP 주소
+MAC 주소 : 48bit FF-FF-FF-FF-FF-FF
+Network ID의 Host ID가 1111 1111일 때 해당 Network의 방송(Broadcast) 주소로 쓰인다.
+![img_4.png](img_4.png)
+
+Host ID로 쓸 수 없는 주소
+- 0 : 서브넷 마스크로 쓰임
+- 255 : Broadcast로 쓰임
+- 1 : Gateway에 준다.
