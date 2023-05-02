@@ -219,3 +219,27 @@ Host ID로 쓸 수 없는 주소
 ## Host 자신을 가리키는 IP주소
 내 Process간에 접근, 접속해야할 때 => 127.0.0.1 : Loopback Address
 IPC(Inter Process Communication)을 구현할 때 Socket을 이용해서 내가 나에게 접속하는 과정을 사용
+
+## TTL과 단편화
+### 인터넷은 라우터의 집합체라고 할 수있는 논리 네트워크이다.
+Router는 L3 Switch이다.
+
+#### 인터넷을 이루는 핵심요소 : Router + DNS
+
+### TTL과 단편화
+- Time To Live는 세포의 '텔로미어' 같은 역할을 한다. (세포가 복제가 일어나면 텔로미어 길이가 짧아지며 세포가 무한증식하는 것을 막는 것)
+- 단편화(Packet을 한번 더 자르는 것)는 MTU 크기 차이로 발생한다.
+- 보통 단편의 조립은 수신측 Host에서 이루어진다.
+
+Packet이 인터넷을 돌아다니며 목적지까지 가야하는데 간혹 실패하는 경우가 있음.
+-> 그럴때는 Packet을 폐기시켜야 한다. 그걸 막는 역할을 하는 것이 TTL
+
+Router와 Router(홉)를 지날 때마다 TTL을 1씩 감소, TTL이 0이 되면 해당 Router가 해당 Packet을 폐기시킨다.
+
+- 단편화는 가급적 발생되지 않는 것이 좋다.
+- Router와 Router에서 Hop을 할 때 각 Router의 MTU가 일정해야 단편화가 일어나지 않는다.
+- Router와 Router에서 Hop을 할 때, Packet의 크기는 1500인데, 1400인 Router를 거쳐가려고 할 때 Packet이 쪼개지는 단편화가 일어난다.
+- 통상 조립은 수신측 End-point에서 한다.
+
+
+단편화가 일어나는 예) VPN IPSec울 이용할 때
