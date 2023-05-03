@@ -243,3 +243,26 @@ Router와 Router(홉)를 지날 때마다 TTL을 1씩 감소, TTL이 0이 되면
 
 
 단편화가 일어나는 예) VPN IPSec울 이용할 때
+
+## 인터넷 설정 자동화를 위한 DHCP
+### 인터넷 사용 전에 해야 할 설정
+* L3 수준의 설정
+  - IP주소 : IPv4 32bit의 주소값을 구매 (ISP - Inter Service Provider에게 구매)
+  - Subnet mask
+  - Gateway IP 주소
+- DNS 주소
+
+자동으로 IP 주소 받기 == DHCP를 활용하겠다.
+
+### DHCP
+- DHCP(Dynamic Host Configuration Protocol) 체계는 주소를 할당하는 서버와 할당 받으려는 클라이언트로 구성된다. - Configuration : IP주소 + Gateway + DNS + Subnet mast 등
+- 복잡한 인터넷 설정을 자동으로 해준다고 볼 수 있는데 핵심은 내가 사용할 IP 주소를 서버가 알려준다는 것에 있다.
+
+Dynamic은 Runtime과 비슷한 의미로 보면 된다.
+
+1. IP를 할당받기 위해 해당 PC가 Broadcast를 한다.
+2. DHCP는 IP Pool을 가지고 있어 할당받기를 원하는 PC들에게 IP를 설정해준다.
+
+## ARP
+
+
