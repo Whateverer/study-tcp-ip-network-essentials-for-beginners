@@ -289,3 +289,22 @@ Address - IP주소(L3)와 MAC주소(L2)
 게임의 서버를 동기화할 때 Round Trip Time을 동기화시킬 때 Ping을 사용한다.
 
 
+# L4 수준 대표주자 TCP와 UDP
+
+## TCP와 UDP 개요
+### TCP와 UDP
+- TCP에만 연결(Connection, Session) 개념이 있다. - 연결은 논리적(Virtual), circuit도 포함
+- 연결은 결과적으로 순서번호로 구현된다.
+- 연결은 '상태(전이)' 개념을 동반한다. (연결 전, 연결 후의 상태)
+- TCP는 배려남, UDP는 (배려가 없는) 나쁜남자에 비유할 수 있다. - TCP는 상대가 데이터를 받을 준비가 되면 보냄, UDP는 상관 안함
+- 둘의 가장 큰 차이 Connection Oriented냐 아니냐
+
+TCP - Segment / UDP - Datagram / Socket - Stream
+
+#### TCP의 Client / Server 연결과정
+1. Server는 연결 대기
+2. Client는 Process로 Socket을 Open, Kenel은 해당 Process에 PID를 부여
+3. PID를 가진 Process가 Socket을 열면 운영체제가 해당 Socket에 TCP Port번호를 부여
+4. TCP에서 Port번호가 열리면 
+5. Server도 Socket을 생성 + 개방(Open), 연결 대기(LISTEN)상태의 Socket으로 연결
+
