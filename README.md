@@ -264,5 +264,25 @@ Dynamic은 Runtime과 비슷한 의미로 보면 된다.
 2. DHCP는 IP Pool을 가지고 있어 할당받기를 원하는 PC들에게 IP를 설정해준다.
 
 ## ARP
+### ARP(Address Resolution Protocol)
+- ARP는 IP주소로 MAC주소를 알아내려 할 때 활용된다.
+- 보통의 경우 PC를 부팅하면 Gateway의 MAC주소를 찾아내기 위해 ARP Request가 발생하며 이에 대응하는 Reply로 MAC 주소를 알 수 있다.
+
+Address - IP주소(L3)와 MAC주소(L2)   
+
+인터넷에 접속하는 과정
+1. DHCP를 통해서 자신의 IP주소를 받는다. (Broadcast 발생)
+2. DHCP가 나의 Gateway의 IP를 알려준다.
+3. ARP Request를 Broadcast해서 DHCP가 알려준 Gateway의 IP주소를 보내 Gateway의 MAC주소를 찾는다.
+4. Gateway가 자신의 MAC주소를 ARP Reply를 한다.
+
+인터넷에 접속하려고 하면 Gateway의 MAC주소를 반드시 알아야 한다. (왜? Frame의 목적지가 Gateway의 MAC Address로 잡히기 때문)  
+목적지의 MAC Address는 Gateway의 MAC Address로 잡힌다.  
+네이버에 접속한다고 예를 들었을 때, IP Packet의 도착지는 네이버의 IP이지만, Frame의 도착지는 Gateway의 MAC Address이다.
+
+
+
+
+
 
 
