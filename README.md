@@ -204,7 +204,8 @@ Header checksum : 네트워크에서 패킷이 송수신되는 중 데이터가 
 bit단위로 AND연산을 했을 때 Network ID가 나와 일치한다면 우리 Network로 오는 Packet인 것을 검증한다.
 
 ### CIDR (Classless Inter-Domain Routing)
-ex) 192.168.0.10/24
+ex) 192.168.0.10/24   
+위와 같이 표현하는 표현방법
 
 ## Broadcast IP 주소
 MAC 주소 : 48bit FF-FF-FF-FF-FF-FF
