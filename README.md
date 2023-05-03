@@ -200,7 +200,7 @@ Header checksum : 네트워크에서 패킷이 송수신되는 중 데이터가 
 
 ## 서브넷 마스크와 CIDR
 ### Subnet Mask
-255(A class).255(B class).255(C class).0
+255(A class).255(B class).255(C class).0      
 bit단위로 AND연산을 했을 때 Network ID가 나와 일치한다면 우리 Network로 오는 Packet인 것을 검증한다.
 
 ### CIDR (Classless Inter-Domain Routing)
