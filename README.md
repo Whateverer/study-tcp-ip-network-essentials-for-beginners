@@ -280,9 +280,12 @@ Address - IP주소(L3)와 MAC주소(L2)
 목적지의 MAC Address는 Gateway의 MAC Address로 잡힌다.  
 네이버에 접속한다고 예를 들었을 때, IP Packet의 도착지는 네이버의 IP이지만, Frame의 도착지는 Gateway의 MAC Address이다.
 
+## Ping과 RTT
+- Ping 유틸리티(그냥 프로그램)는 특정 Host에 대한 RTT(Round Trip Time)을 측정할 목적으로 사용된다.
+- ICMP(Internet Control Message Protocol) 프로토콜을 이용한다.
+- Dos(Denial of Service) 공격용으로 악용되기도 한다.
 
-
-
-
+서버와 회선의 연결 상태를 Ping 이라고 한다.   
+게임의 서버를 동기화할 때 Round Trip Time을 동기화시킬 때 Ping을 사용한다.
 
 
