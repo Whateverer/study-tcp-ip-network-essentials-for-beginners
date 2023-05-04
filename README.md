@@ -309,7 +309,8 @@ TCP - Segment / UDP - Datagram / Socket - Stream
 4. TCP에서 Port번호가 열리면 
 5. Server도 Socket을 생성 + 개방(Open), 연결 대기(LISTEN)상태의 Socket으로 연결
 
-## TCP 연결 과정(3-way handshaking)
+## TCP 연결 과정 (3-way handshaking)
+![img_5.png](img_5.png)
 
 Client Server   
 RTT(Round Trip Time) - Client가 Server에 한 번 갔다가 오는 시간
@@ -320,3 +321,18 @@ RTT(Round Trip Time) - Client가 Server에 한 번 갔다가 오는 시간
 Sequence Number교환, 정책교환(MSS이 얼마인지 알려줌)이 이루어진다.
 Server와 Client간의 연결에서 Maximum Segment Size를 교환하고, 한 쪽이 낮다면 다른 쪽이 거기에 맞춰주어 연결이 일어난다.
 
+## TCP 연결종료 및 상태변화
+### TCP 연결 종료 과정 (4-way handshaking)
+![img_6.png](img_6.png)
+특별한 이유가 없다면 Client가 활동이 Active하다.
+연결을 시작하려는 것도, 연결을 종료하는 것도 Client 쪽이 보편적이다.
+
+1. Client가 연결을 끊기 위해 FIN + ACK을 보낸다.
+2. Server에서 ACK을 보낸다.
+3. Server에서 FIN + ACK을 보낸다.
+4. Client가 ACK을 보낸다.
+5. Closed되면 Socket이 회수가 된다.
+
+## TCP (연결) 상태 변화
+![img_7.png](img_7.png)
+ESTABLISHED가 되어야 연결이 완료된 것.
