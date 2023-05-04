@@ -336,3 +336,15 @@ Server와 Client간의 연결에서 Maximum Segment Size를 교환하고, 한 �
 ## TCP (연결) 상태 변화
 ![img_7.png](img_7.png)
 ESTABLISHED가 되어야 연결이 완료된 것.
+
+
+## TCP, UDP 헤더형식과 게임서버 특징
+### TCP Header 형식
+![img_8.png](img_8.png)
+Window Size : TCP Buffer의 여유 공간
+Checksum : 데이터 손상된 것이 없는지 계산할 때 쓰이는 검사값
+
+### UDP Header 형식
+![img_9.png](img_9.png)
+혼잡제어 X, 게임서버는 UDP 형식을 지향
+
