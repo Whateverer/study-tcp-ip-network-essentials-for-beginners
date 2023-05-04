@@ -309,3 +309,14 @@ TCP - Segment / UDP - Datagram / Socket - Stream
 4. TCP에서 Port번호가 열리면 
 5. Server도 Socket을 생성 + 개방(Open), 연결 대기(LISTEN)상태의 Socket으로 연결
 
+## TCP 연결 과정(3-way handshaking)
+
+Client Server   
+RTT(Round Trip Time) - Client가 Server에 한 번 갔다가 오는 시간
+1. 연결을 하려는 PC(Client)에서 연결요청을 SYN 한다. (Client에서 랜덤하게 뽑은 Sequence number를 같이 보낸다.) SYN(1000)
+2. Server에서도 랜덤하게 만든 Sequence number를 생성, SYN(4000) + ACK(1001)을 보낸다.
+3. Client에서 Server가 보낸 SYN + ACK을 확인 후 한번 더 ACK(4001)을 보낸다.
+
+Sequence Number교환, 정책교환(MSS이 얼마인지 알려줌)이 이루어진다.
+Server와 Client간의 연결에서 Maximum Segment Size를 교환하고, 한 쪽이 낮다면 다른 쪽이 거기에 맞춰주어 연결이 일어난다.
+
