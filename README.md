@@ -414,3 +414,40 @@ Web의 근간 -> HTML + HTTP
 
 ### URI 구조
 - URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
+
+## 굵고 짧게 살펴보는 HTTP
+### HTTP
+- HTTP는 HTML 문서를 전송 받기 위해 만들어진 응용 프로그램 계층 통신 프로토콜이다.
+- 1996에 1.0 스펙이 발표됐으며 1996년 6월에 1.1이 발표됐다.
+- 기본적으로 클라이언트의 요청에 대응하는 응답형식으로 작동한다.
+- 헤더는 다음과 같이 분류된다.
+  + 일반 헤더
+  + 요청 헤더
+  + 응답 헤더
+  + 엔티티 헤더
+- 요청에 사용되는 메서드는 주로 GET, POST이다.
+
+### HTTP method
+- GET : Download
+- POST : Upload
+- HEAD
+- TRACE
+- PUT : Resource 새로 업로드
+- DELETE
+- OPTIONS
+- CONNECT
+
+### HTTP 응답 코드
+- 200 OK
+  + 요청이 정상적으로 처리됨
+- 201 Creat
+  + 요청에 대한 새로운 자원을 생성하는데 성공함
+- 301 Moved permanently
+- 302 Found
+- 400 Bad request
+  + HTTP 규약에 맞지 않는 요청.
+- 403 Forbidden
+  + 권한이 없거나 잘못된 파일 실행 접근 시도.
+- 404 Not found
+- 500 Internal server error
+  + 내부 오류때문에 요청을 처리할 수 없음.
