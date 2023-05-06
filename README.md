@@ -401,3 +401,16 @@ www.naver.com : www - Host Name / naver.com - Domain Name
 - HTML, HTTP의 창시자
 
 HTML은 문서, HTTP는 HTML문서를 실어나르는 프로토콜
+
+## URL과 URI
+- Uniform Resource Locator (위치 지정자 - file의 저장된 위치) : File을 특정함
+- Uniform Resource Identifier (식별자) : 포괄적 개념
+- Protocol://Address:Portnumber/Path(or filename)?Parameter=value
+- http://www.test.co.kr/course.do?cmd=search&search_keyword=Test
+URI > URL
+
+Web의 근간 -> HTML + HTTP
+ / File이 Resource다.
+
+### URI 구조
+- URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
