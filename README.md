@@ -366,7 +366,10 @@ TCP 연결은 유지된다. Process에서 TCP연결이 되어있는지 수시로
 # 웹을 이루는 핵심기술
 
 ## 한 번에 끝내는 DNS
-### DNS 
+L1 ~ L4 : Infra구조   
+L5 ~ : Application  
+
+### DNS (도메인 이름으로 IPv4주소를 검색해서 알려주는 서버) 
 - 분산 구조형 데이터베이스
   + 데이터베이스 시스템(DNS 네임서버)의 분산 구성
   + 데이터의 영역별 구분(Domain Zone) 및 분산관리
@@ -375,3 +378,17 @@ TCP 연결은 유지된다. Process에서 TCP연결이 되어있는지 수시로
   + Domain : 영역, 영토를 의미
   + 도메인 네임의 자율적 생성
   + 생성된 도메인 네임은 언제나 유일(Unique)하도록 네임 체계 구성
+
+www.naver.com : www - Host Name / naver.com - Domain Name
+
+#### https://www.naver.com를 입력했을 때 일어나는 일 
+1. IP 서버 설정에 DNS주소가 포함되어 있음
+2. 운영체제 내부에서 ISP를 통해 DNS에 "https://www.naver.com"의 IP를 알려달라고 질의를 한다.
+3. 그 알아온 IP를 통해 naver에 접속
+
+한 번이라도 어떤 사이트에 접속하게 되면 DNS Cache에 해당 도메인 이름과 아이피를 저장한다.
+
+- DNS Cache
+- Hosts 파일  
+
+공유기가 DNS Forwarding을 이용해서 DNS가 하는 일을 대신 하는 경우도 있다.
