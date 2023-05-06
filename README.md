@@ -451,3 +451,19 @@ Web의 근간 -> HTML + HTTP
 - 404 Not found
 - 500 Internal server error
   + 내부 오류때문에 요청을 처리할 수 없음.
+
+## 그림 한 장으로 외워서 끝내는 웹 서비스 구조 기본이론
+### 웹 서비스 기본 구조
+Web Client와 Web Server는 TCP/IP 연결 아래 진행됨.
+HTTP는 Socket 수준에서 이루어짐 -> Stream
+1. TCP/IP 연결을 기반으로 HTTP 통신이 이루어짐
+2. HTTP Request로 파일 Get 요청을 보냄
+3. Response로 해당 HTML 문서를 보냄
+4. 동적 문서에 대한 필요가 생김 -> script로 Mocha script(Live script -> JavaScript)가 생김.
+5. 구문분석, 렌더링(css), JS엔진 까지 생기게 된다. 
+6. 사용자의 반응에 따라 상호작용의 필요성이 커지게 됨 -> 방법론들이 등장
+7. HTTP의 POST Request 등장 (양방향 상호작용 + 상태전이)
+8. Client와 Server에서 상호작용의 상태를 기억하도록 기록할 필요성이 생김
+9. Client - Cookie / Server - Database가 생기게 된다.
+10. POST 요청 id=tester&pwd=1234 => 원격지 사용자 입력 : 검증 대상
+11. WAS에서 처리를 담당
