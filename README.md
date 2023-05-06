@@ -392,3 +392,12 @@ www.naver.com : www - Host Name / naver.com - Domain Name
 - Hosts 파일  
 
 공유기가 DNS Forwarding을 이용해서 DNS가 하는 일을 대신 하는 경우도 있다.
+
+## 웹 기술의 창시자와 대한민국 인터넷
+### 웹 기술의 창시자 - 팀 버너스리
+- CERN(입자물리연구소)에서 컨설턴트로 근무
+- 정보검색 시스템 구축
+- 이를 바탕으로 현재의 웹 기술을 창안
+- HTML, HTTP의 창시자
+
+HTML은 문서, HTTP는 HTML문서를 실어나르는 프로토콜
