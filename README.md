@@ -467,3 +467,12 @@ HTTP는 Socket 수준에서 이루어짐 -> Stream
 9. Client - Cookie / Server - Database가 생기게 된다.
 10. POST 요청 id=tester&pwd=1234 => 원격지 사용자 입력 : 검증 대상
 11. WAS에서 처리를 담당
+
+## WAS와 RESTful API 그리고 JVM
+APM (Application Performance Management) - WAS와 DB사이에서 성능을 모니터링하는 시스템 ex) Scouter
+JVM은 Java를 위해서 소프트웨어로 구현된 CPU   
+서블릿 컨테이너를 다른 말로 WAS라고 함   
+APM은 이 JVM을 모니터링한다.
+
+12. UI와 Data 분리 -> 자료만 요청 -> xml, Json으로 응답
+13. 클라이언트의 요청에 따라 CRUD를 각 함수로 만들고 그 함수를 Uri로 생성 : RESTful API 등장
